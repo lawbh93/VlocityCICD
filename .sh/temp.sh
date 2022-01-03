@@ -1,5 +1,7 @@
 #!/bin/sh
 echo "Get Diffs"
+git config --global user.email "VlocityCICD@noreply.github.com"
+git config --global user.name "lawbh93/VlocityCICD"
 
 X=${TARGET:default}
 echo $X
