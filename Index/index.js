@@ -9,6 +9,17 @@ try {
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
+  
+  var execProcess = require("./exec_process.js");
+    execProcess.result("bash temp.sh ${branchname}", function(err, response){
+    if(!err){
+        console.log(response);
+    }else {
+        console.log(err);
+    }
+    });
+
+
 } catch (error) {
   core.setFailed(error.message);
 }
