@@ -8,11 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to CICD
     steps:
-      - name: print brancha
+      - name: Get info
         id: act1
         uses: lawbh93/VlocityCICD@latest
         with:
           branch-name: 'master'
       # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.act1.outputs.branchHead }}"
+      - name: Get the output branchHead
+        run: echo "The output branchHead ${{ steps.act1.outputs.branchHead }}"
+      - name: ReadInfo2
+        env:
+          TARGET: ${{ steps.act1.outputs.branchHead }}
+        run: |
+          bash temp.sh   
