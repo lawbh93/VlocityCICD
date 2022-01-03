@@ -25,4 +25,4 @@ jobs:
           TARGET: ${{ steps.act1.outputs.branchHead }}
           BRANCH : ${{ steps.branches.outputs.BRANCHNAME }}
         run: |
-          bash .sh/temp.sh $TARGET $BRANCHNAME
+          bash .sh/temp.sh $TARGET $BRANCH
