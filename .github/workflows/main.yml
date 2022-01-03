@@ -16,10 +16,13 @@ jobs:
           branch-name: 'master'
       # Use the output from the `hello` step
       - name: Get the output branchHead
-        run: echo "The output branchHead ${{ steps.act1.outputs.branchHead }}"
+        id: branches
+        run: |
+          echo "The output branchHead ${{ steps.act1.outputs.branchHead }}"
+          echo "::set-output name=BRANCHNAME::${GITHUB_REF#refs/heads/}"
       - name: ReadInfo2
         env:
           TARGET: ${{ steps.act1.outputs.branchHead }}
-          BRANCH : ${GITHUB_REF#refs/heads/}
+          BRANCH : ${{ steps.branches.outputs.BRANCHNAME }}
         run: |
-          bash .sh/temp.sh $TARGET
+          bash .sh/temp.sh $TARGET $BRANCHNAME
