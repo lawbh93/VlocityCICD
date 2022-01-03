@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: print brancha
         id: act1
-        uses: lawbh93/VlocityCICD
+        uses: lawbh93/VlocityCICD@v1.1
         with:
           branch-name: 'master'
       # Use the output from the `hello` step
