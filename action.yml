@@ -5,9 +5,9 @@ inputs:
     description: 'Head branch'
     required: true
     default: 'main'
-##outputs:
-##  time: # id of output
-##    description: 'The time we greeted you'
+outputs:
+  branchHead: # id of output
+      description: 'branchHead'
 runs:
   using: 'node12'
   main: 'index.js'
