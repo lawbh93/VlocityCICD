@@ -20,4 +20,4 @@ jobs:
         env:
           TARGET: ${{ steps.act1.outputs.branchHead }}
         run: |
-          bash Index/temp.sh $TARGET
+          bash .sh/temp.sh $TARGET
