@@ -1,0 +1,20 @@
+{
+  "name": "vlocitycicd",
+  "version": "1.0.0",
+  "description": "Repositorio prueba Implementaciones Vlocity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawbh93/VlocityCICD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lawbh93/VlocityCICD/issues"
+  },
+  "homepage": "https://github.com/lawbh93/VlocityCICD#readme"
+}
