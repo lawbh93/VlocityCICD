@@ -5,7 +5,7 @@ X=${TARGET:default}
 echo $X
 CURREN_Branch= git branch -a
 
-echo $CURREN_Branch
+echo 'current branch' $CURREN_Branch
 if [[ " $X " =~  'develop' ]]; then
     VAR= git diff --name-only remotes/origin/develop..$CURREN_Branch
 elif [[ " $X " =~  'release' ]]; then
