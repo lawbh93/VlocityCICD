@@ -3,7 +3,9 @@ echo "Get Diffs"
 git config --global user.email "VlocityCICD@noreply.github.com"
 git config --global user.name "lawbh93/VlocityCICD"
 CURREN_Branch= git branch -a
-
+Branch= ${CURRENT_Branch:default}
+echo 'current'
+echo $Branch > TEXT
 X=${TARGET:default}
 echo $X
 if [[ " $X " =~  'develop' ]]; then

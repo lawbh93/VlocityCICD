@@ -20,5 +20,6 @@ jobs:
       - name: ReadInfo2
         env:
           TARGET: ${{ steps.act1.outputs.branchHead }}
+          BRANCH : ${GITHUB_REF#refs/heads/}
         run: |
           bash .sh/temp.sh $TARGET
