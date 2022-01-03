@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to CICD
     steps:
+      - uses: actions/checkout@v2
       - name: Get info
         id: act1
         uses: lawbh93/VlocityCICD@latest
