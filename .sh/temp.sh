@@ -8,13 +8,13 @@ echo $BRANCH
 X=${TARGET:default}
 echo $X
 if [[ " $X " =~  'develop' ]]; then
-    VAR= git diff --name-only remotes/origin/develop..$BRANCH
+    VAR= git diff remotes/origin/develop..$BRANCH --name-only
 elif [[ " $X " =~  'release' ]]; then
-    VAR= git diff --name-only remotes/origin/release..$BRANCH
-elif [[ " $X " =~  'master' ]]; then
-    VAR= git diff --name-only remotes/origin/master..$BRANCH
+    VAR= git diff remotes/origin/release..$BRANCH --name-only
+elif [[ " $X " =~ 'master' ]]; then
+    VAR= git diff remotes/origin/master..$BRANCH --name-only
 # Siguiente condicion solo para fines de pruebas
-elif [[ " $X " =~  'updateMetadata' ]]; then
-    VAR= git diff --name-only remotes/origin/master..$BRANCH
+elif [[ " $X " =~ 'updateMetadata' ]]; then
+    VAR= git diff remotes/origin/master..$BRANCH --name-only
 fi
 echo $VAR
