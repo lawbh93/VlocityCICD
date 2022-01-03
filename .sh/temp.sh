@@ -2,7 +2,7 @@
 echo "Get Diffs"
 git config --global user.email "VlocityCICD@noreply.github.com"
 git config --global user.name "lawbh93/VlocityCICD"
-BRANCH=${BRANCHNAME:default}
+BRANCH=${BRANCH:default}
 echo 'current'
 echo $BRANCH
 X=${TARGET:default}
