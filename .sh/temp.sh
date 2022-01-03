@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo "Get Diffs"
 git config --global user.email "VlocityCICD@noreply.github.com"
 git config --global user.name "lawbh93/VlocityCICD"
