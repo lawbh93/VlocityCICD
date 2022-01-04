@@ -43,6 +43,20 @@ fs.readFile("./Index/FilePaths.json", "utf8", (err, jsonString) => {
           console.log(sourceDir);
           console.log(destDir);
           
+          if (!fs.existsSync(destDir)){
+            fs.mkdirSync(destDir, { recursive: true });
+        }
+        
+        //copy directory content including subfolders
+        fse.copy(sourceDir, destDir, function (err) {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log("success!");
+          }
+        }); 
+
+
         }
       }
     }
