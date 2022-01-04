@@ -22,17 +22,16 @@ echo $VAR
 echo 'Differences end'
 node Index/FindStrings.js $VAR
 
-git add tmpDatapacks/
 #
 if [[ " $X " =~  'develop' ]]; then
-    VAR2=$(git diff  remotes/origin/develop..$BRANCH --cached --name-only tmpDatapacks)
+    VAR2=$(git diff --name-only remotes/origin/develop..$BRANCH tmpDatapacks)
 elif [[ " $X " =~  'release' ]]; then
-    VAR2=$(git diff remotes/origin/release..$BRANCH --cached --name-only tmpDatapacks)
+    VAR2=$(git diff --name-only remotes/origin/release..$BRANCH tmpDatapacks)
 elif [[ " $X " =~  'master' ]]; then
-    VAR2=$(git diff remotes/origin/master..$BRANCH --cached --name-only tmpDatapacks)
+    VAR2=$(git diff --name-only remotes/origin/master..$BRANCH tmpDatapacks)
 # Siguiente condicion solo para fines de pruebas
 elif [[ " $X " =~  'updateMetadata' ]]; then
-    VAR2=$(git diff remotes/origin/master..$BRANCH --cached --name-only tmpDatapacks)
+    VAR2=$(git diff --name-only remotes/origin/master..$BRANCH tmpDatapacks)
 fi
 echo 'Differences start2'
 echo $VAR2 
