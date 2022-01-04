@@ -24,14 +24,14 @@ node Index/FindStrings.js $VAR
 
 #
 if [[ " $X " =~  'develop' ]]; then
-    VAR2=$(git diff --name-only remotes/origin/develop..$BRANCH tmpDatapacks)
+    VAR2=$(git diff --name-only $BRANCH tmpDatapacks)
 elif [[ " $X " =~  'release' ]]; then
-    VAR2=$(git diff --name-only remotes/origin/release..$BRANCH tmpDatapacks)
+    VAR2=$(git diff --name-only $BRANCH tmpDatapacks)
 elif [[ " $X " =~  'master' ]]; then
-    VAR2=$(git diff --name-only remotes/origin/master..$BRANCH tmpDatapacks)
+    VAR2=$(git diff --name-only $BRANCH tmpDatapacks)
 # Siguiente condicion solo para fines de pruebas
 elif [[ " $X " =~  'updateMetadata' ]]; then
-    VAR2=$(git diff --name-only remotes/origin/master..$BRANCH tmpDatapacks)
+    VAR2=$(git diff --name-only $BRANCH tmpDatapacks)
 fi
 echo 'Differences start2'
 echo $VAR2 
