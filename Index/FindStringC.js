@@ -37,7 +37,7 @@ try {
           const DataPack = JSON.parse(jsonString)
           fs.readFile('./Index/DataPackMetadata.json', 'utf8', (err2, jsonString2) => {
               if (err) {
-                  console.log("Error reading file from disk:", err2)
+                  console.log("Error reading file from disk 2 :", err2)
                   return
               }
               try {
@@ -52,12 +52,12 @@ try {
                   }
                     
           } catch(err2) {
-                  console.log('Error parsing JSON string:', err2)
+                  console.log('Error parsing JSON string 2:', err2)
               }
           })
   
   } catch(err) {
-          console.log('Error parsing JSON string:', err)
+          console.log('Error parsing JSON string 1:', err)
       }
   })
   
