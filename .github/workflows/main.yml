@@ -32,5 +32,5 @@ jobs:
           bash .sh/temp.sh $TARGET $BRANCH
       - name: Read SH info
         run: |
-          echo "The output is" $VAR
+          echo "The output is" ${{ env.DIFFS }}
 
