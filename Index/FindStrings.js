@@ -21,8 +21,10 @@ process.argv.forEach((val, index) => {
       try {
           const DataPackInfo = JSON.parse(jsonString)
           for(let i=0;i<differences.length;i++) {
-            var str =differences[i] ;
+            var str =differences[i];
+            console.log('str: '+str);
             for(let j=0;j<DataPackInfo.length;j++) {
+               console.log('DataPackInfo[j].FilePath '+DataPackInfo[j].FilePath);
                if(str[i].includes(DataPackInfo[j].FilePath)) {
                   var newString=DataPackInfo[j].FilePath;
                   var tokens = str.split(newString);
