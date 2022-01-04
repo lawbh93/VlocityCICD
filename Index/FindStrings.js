@@ -2,6 +2,9 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 var fs = require("fs");
+var fs_Extra = require('fs-extra');
+var path = require('path');
+
 var differences = [];
 
 // Intitializing the readFileLines with filename
@@ -35,7 +38,10 @@ fs.readFile("./Index/FilePaths.json", "utf8", (err, jsonString) => {
           FileshortName= FileShort[0];
           var NPath=  DataPackInfo[j].FilePath+FileshortName;
           console.log(NPath);
-
+          var sourceDir = NPath;
+          var destDir = '/tmpDatapacks/'+DataPackInfo[j].Sobject+'/'+FileshortName;
+          console.log(destDir);
+          
         }
       }
     }
