@@ -12,7 +12,7 @@ process.argv.forEach((val, index) => {
   if (val.includes("tmpDatapacks")) {
     differences.push(val);
   }
-  console.log("differences: " + differences);
+  console.log("New differences: " + differences);
 });
 
 try {

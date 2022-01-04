@@ -33,7 +33,7 @@ elif [[ " $X " =~  'master' ]]; then
 elif [[ " $X " =~  'updateMetadata' ]]; then
     VAR2=$(git diff remotes/origin/master..$BRANCH --name-only tmpDatapacks)
 fi
-echo 'Differences start'
+echo 'Differences start2'
 echo $VAR2
-echo 'Differences end'
+echo 'Differences end2'
 node Index/FindStringC.js $VAR2
