@@ -32,5 +32,5 @@ jobs:
           bash .sh/temp.sh $TARGET $BRANCH
       - name: Read SH info
         run: |
-          ${{ steps.shaches.outputs.VAR }}
+          echo "The output is" ${{ steps.shaches.outputs.VAR }}
 
