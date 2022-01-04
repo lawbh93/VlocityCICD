@@ -38,5 +38,7 @@ echo 'Differences start2'
 echo $VAR2 
 echo 'Differences end2'
 node Index/FindStringC.js $VAR2
-
+git add Index/
+git restore --staged tmpDatapacks
 git status
+git diff --cached $BRANCH Index
