@@ -54,6 +54,9 @@ fs.readFile("./Index/FilePaths.json", "utf8", (err, jsonString) => {
             console.log("success!");
           }
         }); 
+        git status
+
+
 
 
         }
