@@ -25,7 +25,7 @@ process.argv.forEach((val, index) => {
             console.log('str: '+str);
             for(let j=0;j<DataPackInfo.length;j++) {
                console.log('DataPackInfo[j].FilePath '+DataPackInfo[j].FilePath);
-               if(str[i].includes(DataPackInfo[j].FilePath)) {
+               if(str.includes(DataPackInfo[j].FilePath)) {
                   console.log('Si lo incluye');
                   var newString=DataPackInfo[j].FilePath;
                   var tokens = str.split(newString);
