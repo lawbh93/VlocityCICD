@@ -17,5 +17,7 @@ elif [[ " $X " =~  'master' ]]; then
 elif [[ " $X " =~  'updateMetadata' ]]; then
     VAR= git diff remotes/origin/master..$BRANCH --name-only DataPackMetadata
 fi
+echo 'Differences start'
 echo $VAR
+echo 'Differences end'
 node Index/FindStrings.js $VAR
