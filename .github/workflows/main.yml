@@ -30,6 +30,8 @@ jobs:
           BRANCH : ${{ steps.branches.outputs.BRANCHNAME }}
         run: |
           bash .sh/temp.sh $TARGET $BRANCH
+          git add .
           git status
+
 
 
