@@ -7,7 +7,7 @@ var differences= {};
 // Intitializing the readFileLines with filename
 process.argv.forEach((val, index) => {
    console.log(`${index}: ${val}`);
-   if($(val).includes('DataPackMetadata')) {
+   if(val.includes('DataPackMetadata')) {
       differences.push($(val));    
    }
    console.log('differences: '+differences);
