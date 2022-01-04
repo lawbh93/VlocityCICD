@@ -18,6 +18,9 @@ jobs:
       - name: Get the output branchHead
         id: branches
         run: |
+          git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+          git fetch --all
+          git branch --show-current >> branch.txt
           echo "The output branchHead ${{ steps.act1.outputs.branchHead }}"
           echo "::set-output name=BRANCHNAME::${GITHUB_REF#refs/heads/}"
       - name: ReadInfo2
