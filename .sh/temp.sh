@@ -18,5 +18,3 @@ elif [[ " $X " =~  'updateMetadata' ]]; then
     VAR= git diff remotes/origin/master..$BRANCH --name-only DataPackMetadata
 fi
 echo $VAR
-
-node FindStrings.js $VAR

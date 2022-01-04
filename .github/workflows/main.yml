@@ -24,8 +24,13 @@ jobs:
           echo "The output branchHead ${{ steps.act1.outputs.branchHead }}"
           echo "::set-output name=BRANCHNAME::${GITHUB_REF#refs/heads/}"
       - name: ReadInfo2
+        id: shaches
         env:
           TARGET: ${{ steps.act1.outputs.branchHead }}
           BRANCH : ${{ steps.branches.outputs.BRANCHNAME }}
         run: |
           bash .sh/temp.sh $TARGET $BRANCH
+      - name: Read SH info
+        run: |
+          ${{ steps.shaches.outputs.VAR }}
+
