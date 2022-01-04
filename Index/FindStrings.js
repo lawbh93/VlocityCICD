@@ -1,9 +1,8 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
 
-var fs = require("fs");
-var fs_Extra = require('fs-extra');
-var path = require('path');
+var fs = require('fs');
+var fse = require('fs-extra');
 
 var differences = [];
 
